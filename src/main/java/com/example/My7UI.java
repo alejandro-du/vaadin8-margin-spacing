@@ -2,19 +2,24 @@ package com.example;
 
 import com.vaadin.server.FontAwesome;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import com.vaadin.ui.themes.ValoTheme;
+import com.vaadin.v7.shared.ui.label.ContentMode;
+import com.vaadin.v7.ui.HorizontalLayout;
+import com.vaadin.v7.ui.Label;
+import com.vaadin.v7.ui.PasswordField;
+import com.vaadin.v7.ui.TextField;
+import com.vaadin.v7.ui.VerticalLayout;
 
-public class MyUI extends UI {
+public class My7UI extends UI {
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         TextField username = new TextField();
-        username.setPlaceholder("Username");
+        username.setInputPrompt("Username");
         username.setWidth("100%");
         PasswordField password = new PasswordField();
-        password.setPlaceholder("Password");
+        password.setInputPrompt("Password");
         password.setWidth("100%");
         Label forgot = new Label("Forgot password? <a>Click here to restore</a>", ContentMode.HTML);
         Button signIn = new Button("Sign in");
@@ -27,7 +32,7 @@ public class MyUI extends UI {
         Button google = new Button("Google", FontAwesome.GOOGLE);
         Label openIdLabel = new Label("<i>Or use your OpenID to sign in:</i>", ContentMode.HTML);
         TextField openId = new TextField();
-        openId.setPlaceholder("Open Id");
+        openId.setInputPrompt("Open Id");
         openId.setWidth("100%");
         Button go = new Button("Go");
         go.addStyleName(ValoTheme.BUTTON_PRIMARY);

@@ -971,7 +971,7 @@
  */
 
 .v-vaadin-version:after {
-	content: "8.0.0.beta1";
+	content: "8.0-SNAPSHOT";
 }
 
 .v-widget {
@@ -1742,6 +1742,10 @@ div.v-layout.v-horizontal.v-widget {
 	max-height: 10em;
 	overflow: auto;
 	margin-top: 10px;
+}
+
+.mytheme .v-tooltip .v-tooltip-text pre {
+	margin: 0px;
 }
 
 .mytheme .v-tooltip .v-errormessage[aria-hidden="true"] + .v-tooltip-text {
